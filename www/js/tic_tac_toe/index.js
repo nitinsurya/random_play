@@ -1,4 +1,4 @@
-//var tic_tac_toe = function(){
+var tic_tac_toe = function(){
     var x = "img/x.jpg";
         // Location of where you uploaded your site's x.jpg image
 
@@ -260,4 +260,16 @@
         var blockName = this.getAttribute('data-block');
         yourChoice(blockName);
     });
-//};
+
+    $('.play_again_button').click(function(){
+        playAgain();
+    });
+
+    $('.help_button').click(function(){
+        help();
+    });
+
+    $('.quit_button').click(function(){
+        quitGame();
+    });
+};
