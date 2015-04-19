@@ -89,7 +89,7 @@ h1 {
 
 .event.listening {
     background-color:#333333;
-    display:none;
+    display:block;
 }
 
 .event.received {

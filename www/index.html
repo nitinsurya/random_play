@@ -25,51 +25,51 @@
                     <table border=1>
                       <tr>
                         <td>
-                          <a href="javascript:yourChoice('A')">
+                          <a class="t-block" data-block="A">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=A alt="Top-Left">
                           </a>
                         </td>
                         <td>
-                          <a href="javascript:yourChoice('B')">
+                          <a class="t-block" data-block="B">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=B alt="Top-Center">
                           </a>
                         </td>
                         <td>
-                          <a href="javascript:yourChoice('C')">
+                          <a class="t-block" data-block="C">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=C alt="Top-Right">
                           </a>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <a href="javascript:yourChoice('D')">
+                          <a class="t-block" data-block="D">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=D alt="Middle-Left">
                           </a>
                         </td>
                         <td>
-                          <a href="javascript:yourChoice('E')">
+                          <a class="t-block" data-block="E">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=E alt="Middle-Center">
                           </a>
                         </td>
                         <td>
-                          <a href="javascript:yourChoice('F')">
+                          <a class="t-block" data-block="F">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=F alt="Middle-Right">
                           </a>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <a href="javascript:yourChoice('G')">
+                          <a class="t-block" data-block="G">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=G alt="Bottom-Left">
                           </a>
                         </td>
                         <td>
-                          <a href="javascript:yourChoice('H')">
+                          <a class="t-block" data-block="H">
                             <img src="img/blank.jpg" border=0 height=100 width=100 name=H alt="Bottom-Center">
                           </a>
                         </td>
                         <td>
-                          <a href="javascript:yourChoice('I')">
+                          <a class="t-block" data-block="I">
                             <img src="img/blank.jpg" border=0 height=100 width=100  name=I alt="Bottom-Right">
                           </a>
                         </td>
@@ -91,15 +91,16 @@
                     <td>Ties</td>
                   </tr>
                 </table>
-                <input type=button value="Play Again" onClick="playAgain();">
+                <input type=button value="Play Again" class="play_again_button" onClick="playAgain();">
                 &nbsp;&nbsp;
-                <input type=button value="Game Help" onClick="help();">
+                <input type=button value="Game Help" class="help_button" onClick="help();">
                 &nbsp;&nbsp;
-                <input type=button value="Quit Game" onClick="quitGame();">
+                <input type=button value="Quit Game" class="quit_button" onClick="quitGame();">
               </form>
             </center>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/tic_tac_toe/index.js"></script>
     </body>
