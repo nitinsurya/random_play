@@ -1,8 +1,8 @@
 var tic_tac_toe = function(){
-    var x = "img/x.jpg";
+    var x = "img/cross.png";
         // Location of where you uploaded your site's x.jpg image
 
-    var o = "img/o.jpg";
+    var o = "img/zero.png";
     // Location of where you uploaded your site's o.jpg image
 
     var blank = "img/blank.jpg";

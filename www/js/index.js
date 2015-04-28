@@ -42,7 +42,8 @@ var app = {
         var receivedElement = $('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+
+        window.location = "tic_tac_toe.html";
     }
 };
 
