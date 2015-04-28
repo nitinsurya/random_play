@@ -1,103 +1,87 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Hello World</title>
-  </head>
-  <body>
-    <div id="tic-tac-toe">
-      <center>
-        <form name=game>
-          <table border=0>
-            <td>
-              <table border=1>
-                <tr>
-                  <td>
-                    <a class="t-block" data-block="A">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=A alt="Top-Left">
-                    </a>
-                  </td>
-                  <td>
-                    <a class="t-block" data-block="B">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=B alt="Top-Center">
-                    </a>
-                  </td>
-                  <td>
-                    <a class="t-block" data-block="C">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=C alt="Top-Right">
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a class="t-block" data-block="D">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=D alt="Middle-Left">
-                    </a>
-                  </td>
-                  <td>
-                    <a class="t-block" data-block="E">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=E alt="Middle-Center">
-                    </a>
-                  </td>
-                  <td>
-                    <a class="t-block" data-block="F">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=F alt="Middle-Right">
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a class="t-block" data-block="G">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=G alt="Bottom-Left">
-                    </a>
-                  </td>
-                  <td>
-                    <a class="t-block" data-block="H">
-                      <img src="img/blank.jpg" border=0 height=100 width=100 name=H alt="Bottom-Center">
-                    </a>
-                  </td>
-                  <td>
-                    <a class="t-block" data-block="I">
-                      <img src="img/blank.jpg" border=0 height=100 width=100  name=I alt="Bottom-Right">
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </table>
-          <table>
+<div id="tic-tac-toe">
+  <center>
+    <form name=game>
+      <table border=0>
+        <td>
+          <table border=1>
             <tr>
-              <td><input type=text size=5 name=you></td>
-              <td>You</td>
+              <td>
+                <a class="t-block" data-block="A">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=A alt="Top-Left">
+                </a>
+              </td>
+              <td>
+                <a class="t-block" data-block="B">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=B alt="Top-Center">
+                </a>
+              </td>
+              <td>
+                <a class="t-block" data-block="C">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=C alt="Top-Right">
+                </a>
+              </td>
             </tr>
             <tr>
-              <td><input type=text size=5 name=computer></td>
-              <td>Computer</td>
+              <td>
+                <a class="t-block" data-block="D">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=D alt="Middle-Left">
+                </a>
+              </td>
+              <td>
+                <a class="t-block" data-block="E">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=E alt="Middle-Center">
+                </a>
+              </td>
+              <td>
+                <a class="t-block" data-block="F">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=F alt="Middle-Right">
+                </a>
+              </td>
             </tr>
             <tr>
-              <td><input type=text size=5 name=ties></td>
-              <td>Ties</td>
+              <td>
+                <a class="t-block" data-block="G">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=G alt="Bottom-Left">
+                </a>
+              </td>
+              <td>
+                <a class="t-block" data-block="H">
+                  <img src="img/blank.jpg" border=0 height=100 width=100 name=H alt="Bottom-Center">
+                </a>
+              </td>
+              <td>
+                <a class="t-block" data-block="I">
+                  <img src="img/blank.jpg" border=0 height=100 width=100  name=I alt="Bottom-Right">
+                </a>
+              </td>
             </tr>
           </table>
-          <input type=button value="Play Again" class="play_again_button">
-          &nbsp;&nbsp;
-          <input type=button value="Game Help" class="help_button">
-          &nbsp;&nbsp;
-          <input type=button value="Quit Game" class="quit_button">
-        </form>
-      </center>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/tic_tac_toe/index.js"></script>
-  </body>
+        </td>
+      </table>
+      <table>
+        <tr>
+          <td><input type=text size=5 name=you></td>
+          <td>You</td>
+        </tr>
+        <tr>
+          <td><input type=text size=5 name=computer></td>
+          <td>Computer</td>
+        </tr>
+        <tr>
+          <td><input type=text size=5 name=ties></td>
+          <td>Ties</td>
+        </tr>
+      </table>
+      <input type=button value="Play Again" class="play_again_button">
+      &nbsp;&nbsp;
+      <input type=button value="Game Help" class="help_button">
+      &nbsp;&nbsp;
+      <input type=button value="Quit Game" class="quit_button">
+    </form>
+  </center>
+</div>
 
-  <script>
-    tic_tac_toe();
-  </script>
-</html>
+<script type="text/javascript" src="js/tic_tac_toe/index.js"></script>
+<script>
+  tic_tac_toe();
+</script>
