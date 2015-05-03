@@ -43,7 +43,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
 
-        $("#game_page").load("tic_tac_toe.html");
+        $("#game_page").load("js/othello/othello.html");
     }
 };
 
