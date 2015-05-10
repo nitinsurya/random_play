@@ -17,7 +17,7 @@
  * under the License.
  */
 var app = {
-    presentApps: ['js/othello/othello.html', 'tic_tac_toe.html'],
+    presentApps: ['js/othello/othello.html', 'tic_tac_toe.html', '9word.html'],
     // Application Constructor
     initialize: function() {
         this.bindEvents();
