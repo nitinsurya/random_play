@@ -17,6 +17,7 @@
  * under the License.
  */
 var app = {
+    presentApps: ['js/othello/othello.html', 'tic_tac_toe.html'],
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -41,10 +42,17 @@ var app = {
         var listeningElement = parentElement.parentNode;
         var receivedElement = $('.received');
 
+        var loadFile = this.presentApps[(random(10) % 2)]
+
         listeningElement.setAttribute('style', 'display:none;');
 
-        $("#game_page").load("js/othello/othello.html");
+        alert(loadFile);
+        $("#game_page").load(loadFile);
     }
 };
+
+function random(nn) {
+  return Math.floor(Math.random() * nn);
+}
 
 app.initialize();
