@@ -42,11 +42,10 @@ var app = {
         var listeningElement = parentElement.parentNode;
         var receivedElement = $('.received');
 
-        var loadFile = this.presentApps[(random(10) % 2)]
+        var loadFile = this.presentApps[(random(10) % this.presentApps.length)]
 
         listeningElement.setAttribute('style', 'display:none;');
 
-        alert(loadFile);
         $("#game_page").load(loadFile);
     }
 };
