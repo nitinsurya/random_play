@@ -23,9 +23,11 @@ var word9 = function() {
   Pic = new Array(27);
   Pic[0] = new Image();
   Pic[0].src = "img/9word/xword__.gif";
+  Pic[0].text = ' ';
   for (n = 1; n < 27; n++) {
     Pic[n] = new Image();
     Pic[n].src = "img/9word/xword_" + Alphabet.charAt(n) + ".gif";
+    Pic[n].text = Alphabet.charAt(n);
   }
   Pic[27] = new Image();
   Pic[27].src = "img/9word/xword_0.gif";
@@ -82,8 +84,11 @@ var word9 = function() {
       }
     }
     for (ii = 0; ii < 3; ii++) {
-      for (jj = 0; jj < 3; jj++)
-        document.images[3 * ii + jj].src = "img/9word/xword_" + Grid[ii][jj].toLowerCase() + ".gif";
+      for (jj = 0; jj < 3; jj++) {
+        //document.images[3 * ii + jj].src = "img/9word/xword_" + Grid[ii][jj].toLowerCase() + ".gif";
+        $('.sel_' + ii + jj).html(Grid[ii][jj].toLowerCase());
+        console.log('jekasdjfasdj ');
+      }
     }
     TWord = "";
     document.OptionsForm.CurWord.value = TWord;
@@ -118,7 +123,8 @@ var word9 = function() {
     if (Grid[ii][jj] == "_") return;
     TWord += Grid[ii][jj];
     Grid[ii][jj] = "_";
-    document.images[3 * ii + jj].src = "img/9word/xword__.gif";
+    //document.images[3 * ii + jj].src = "img/9word/xword__.gif";
+    $('.sel_'+ii+jj).html(' ');
     document.OptionsForm.CurWord.value = TWord;
     if (TWord != CWord) return;
     Now = new Date();
@@ -139,16 +145,18 @@ var word9 = function() {
     alert("Find the 9-letter-word which is hidden in the grid!\nGood luck!")
   }
 
-  var elem = "<table border=2 cellpadding=2 cellspacing=2 bgcolor=#FFFFCC><tr><td>";
+  var elem = "<table border=0 cellpadding=3 cellspacing=3 bgcolor=#f4f4f4><tr><td>";
   for (n = 0; n < 3; n++) {
     elem += "<NOBR>";
-    for (m = 0; m < 3; m++)
-      elem += "<IMG class='charDispSet' data-val_n='" + n + "' data-val_m='" + m + "' src='" + Pic[0].src + "' border=0>";
+    for (m = 0; m < 3; m++) {
+      //elem += "<IMG class='charDispSet' data-val_n='" + n + "' data-val_m='" + m + "' src='" + Pic[0].src + "' border=0>";
+      elem += "<div class='charDispSet sel_"+ n + m +"' data-val_n='" + n + "' data-val_m='" + m + "'>" + Pic[0].text + "</div>";
+    }
     elem += "</NOBR><BR>";
   }
   elem += "</td></tr>";
-  elem += '<table border="2" cellpadding="2" cellspacing="2" bgcolor="#FFFFCC"><tbody>' +
-    '<tr><td colspan="3" align="center"><input name="CurWord" value="" style="width:90" size="11" readonly=""></td></tr>' +
+  elem += '<table border="0" cellpadding="3" cellspacing="3" bgcolor="#f4f4f4"><tbody>' +
+    '<tr><td colspan="3" align="center"><input name="CurWord" value="" style="width:156" size="11" readonly=""></td></tr>' +
     '</tbody></table>';
   $('.wordSetHolder').append(elem);
 

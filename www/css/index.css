@@ -121,3 +121,14 @@ h1 {
 .hidden {
     display: none;
 }
+
+
+/*************************************** 9 word ****************************************/
+.wordSetHolder div.charDispSet {
+    width: 50px;
+    height: 35px;
+    float: left;
+    border: 1px solid #000;
+    text-align: center;
+    padding-top: 15px;
+}
